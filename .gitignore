@@ -1,0 +1,7 @@
+secrets.py
+venv
+.idea
+webScraper.py
+__pycache__/
+
+
