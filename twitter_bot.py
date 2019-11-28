@@ -1,4 +1,4 @@
-import  Twitter_Interface as ti
+import Twitter_Interface as ti
 
 print('Hello Twitter')
 

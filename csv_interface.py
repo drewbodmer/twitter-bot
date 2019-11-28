@@ -14,7 +14,7 @@ def read(lor):
         return words
 
 # write the given words from the dict into the given CSV file
-def write(self, words, lor):
+def write(words, lor):
     with open(lor, mode='w') as tweets:
         fieldnames = ['word', 'frequency']
         writer = csv.DictWriter(tweets, fieldnames=fieldnames)
@@ -26,5 +26,5 @@ def write(self, words, lor):
                 previous_words[word] += words[word]
             else:
                 writer.writerow({'word': word, 'frequency': words[word]})
-        for word in previous_words:
+        for word in previous_words.keys():
             writer.writerow({'word': word, 'frequency': previous_words[word]})
